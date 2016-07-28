@@ -7,11 +7,13 @@
 subreddit = ""
 queues = ["modqueue"]
 thresholds = [
-	(20, "There are {count} in {queue}. {url}")
+	(50, "Mods, there are {count} unmoderated items in the {queue} queue. {url}")
+	(75, "Mods, there are {count} unmoderated items in the {queue} queue. Everybody will be pinged if some of these items are not dealt with soon. {url}")
+	(100, "@here, there are {count} unmoderated items in the {queue} queue. {url}")
 ]
 
 slack_webhook = ""
-slack_channels = ["general"]
+slack_channels = ["moderation"]
 
 oauth_public = ""
 oauth_secret = ""
